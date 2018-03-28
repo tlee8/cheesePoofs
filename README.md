@@ -24,6 +24,7 @@ is recorded.
 
 ## English or pseudocode description of algorithm
 if (explorer on treasure) base case;
+if (explorer in the wall) print "no solution";
 else {
 	for ( int t = 0; t < 4; t++ ) {
 		if ( t == 0 ) move( "up" );
