@@ -1,4 +1,4 @@
-# CheesePooves
+# CheesePoofs
 
 ## personnel
 Ela Gulsen, Thomas Lee
