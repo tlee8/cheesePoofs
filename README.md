@@ -20,7 +20,9 @@ from the former designated starting point and ending at the treasure.
 
 ## base case
 The explorer's designated starting point is on the treasure, and the path
-is recorded.
+is recorded. Return the solution. 
+If the explorer is in the wall, print "no solution".
+
 
 ## English or pseudocode description of algorithm
 if (explorer on treasure) base case;
@@ -32,8 +34,11 @@ else {
 		else if ( t == 2 ) move( "left" );
 		else move( "right" );
 		if (isLegal) recursive abstraction; 
+		else {
+			make a wall on the spot the explorer currently is
+			
+		} //backtracking happens
 	}
-	go back to the last step; 
 }
 
 ## class(es), with fields and methods
