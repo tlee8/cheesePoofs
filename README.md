@@ -25,7 +25,7 @@ If the explorer is in the wall, print "no solution".
 
 
 ## English or pseudocode description of algorithm
-'''
+```
 
 if (explorer on treasure) base case;
 if (explorer in the wall) print "no solution";
@@ -43,7 +43,7 @@ else {
 	}
 }
 
-'''
+```
 
 ## class(es), with fields and methods
 MazeMap class
