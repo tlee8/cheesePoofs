@@ -22,8 +22,8 @@ public class UserOfMaze {
                             );
         System.out.println( maze + System.lineSeparator());
 
-        // moveTest( maze);
-	// dropTest( maze);
+        //moveTest( maze);
+		//dropTest( maze);
 
         copyConstructTest( maze);
 
