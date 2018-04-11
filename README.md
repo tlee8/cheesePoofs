@@ -57,3 +57,5 @@ MazeSolver class
 * Number of solutions 
 * Able to detect the legality of looping and disclude looping paths from 
 the valid paths
+
+## known bugs
