@@ -90,8 +90,10 @@ public class Maze {
         // Copy the explorer's position (code by Holmes is asserted to work)
         explorerPosition = new Vector( old.explorerPosition);
 
-        maze = old.maze.clone();
-        rankCount = old.rankCount;
+	System.out.println(" >:( ");
+	
+	maze = old.maze.clone();
+	rankCount = old.rankCount;
 	
     }
 
