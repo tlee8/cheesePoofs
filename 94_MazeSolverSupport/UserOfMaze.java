@@ -25,13 +25,11 @@ public class UserOfMaze {
         //moveTest( maze);
 		//dropTest( maze);
 
-        copyConstructTest( maze);
-
         //test Displayer
         // displayer = new Displayer( Integer.parseInt( commandLine[3]));
         // displayerTest( maze);
 
-        snapshotDemo( maze);
+        //snapshotDemo( maze);
     }
 
 
