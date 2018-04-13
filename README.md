@@ -40,7 +40,6 @@ else {
 
 ## class(es), with fields and methods
 MazeMap class
-* isLegal()
 * move( String direction )
 * remove 
 
@@ -54,3 +53,4 @@ MazeSolver class
 the valid paths
 
 ## known bugs
+* Given an invalid coordinate, you will in turn be given a lengthy error
