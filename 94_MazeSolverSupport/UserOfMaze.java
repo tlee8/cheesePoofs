@@ -103,8 +103,6 @@ public class UserOfMaze {
      */
     private static void copyConstructTest( Maze old) {
         Maze copy = new Maze( old);
-
-	System.out.println(" b ru h");
         // change the old
         old.go( Maze.NORTH);
         old.dropA( Maze.WALL);

@@ -13,34 +13,48 @@ public class MazeSolver {
 
     // ArrayList< Maze > solutions; // to hold valid solutions found during the solving
 				     // process
-    Maze inProgress; 	     // used during the solver method to find a solution
-
+    private Maze inProgress; 	     // used during the solver method to find a solution
+	private int steps;
 
 	// a constructor that updates solutions such that all correct paths that exist
 	// for the maze are included.
 	public MazeSolver( Maze maze ) {
-	    // base case
-	    Maze inprogress = maze;
- 
-	    if (maze.explorerIsOnA() == maze.TREASURE) {
-		System.out.println("Solved");
-		return;
+	    inProgress = maze;
+		steps = 0;
+		}
+	
+	
+	
+	// CHANGE TO PRIVATE
+	public boolean solve() {
+		// base case
+		if (inProgress.explorerIsOnA() == inProgress.TREASURE) {
+			System.out.println("Current board:" + "\n" + inProgress);
+			return true;
 	    }
-	    if (maze.explorerIsOnA() == maze.WALL) {
-		return;
+	    if (inProgress.explorerIsOnA() == inProgress.WALL) {
+			return false;
 	    }
+		// recursive case
+		Maze snapshot = new Maze( inProgress);
+		System.out.println("Current board: " +"\n" + inProgress);
+		for( int dir = 1; dir < 5; dir++) {
+			inProgress.dropA(inProgress.WALL);
+			inProgress.go( (int) Math.pow(2, dir));
+			
+			if ( (inProgress.explorerIsOnA() == inProgress.STEPPING_STONE ||
+				  inProgress.explorerIsOnA() == inProgress.TREASURE)
+				&& solve()) { 
+				return true;
+			}
+			
+			else {
+				inProgress = new Maze( snapshot);
+				
+			}
+		}
+		
+		return false;
 		
 	}
-
-
-	// returns a String representing the board
-	public String toString() {
-	    
-	    System.out.println(inProgress.explorerIsOnA());
-	    return inProgress.toString();
-	    
-	    
-	}
-
-
 }

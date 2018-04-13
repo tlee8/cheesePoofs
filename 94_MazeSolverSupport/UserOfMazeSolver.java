@@ -13,19 +13,19 @@ public class UserOfMazeSolver {
 
 	public static void main(String[] commandLine)
 	  throws java.io.FileNotFoundException {
-		Maze maze = new Maze( commandLine[0]
+		// creates a new maze based off of what was given by the command line
+		test(new Maze( commandLine[0]
                    , Integer.parseInt( commandLine[1])
                    , Integer.parseInt( commandLine[2])
-                   );
-		// creates a new maze based off of what was given by the command line
-		test(maze);
+                   ));
 	}
 	
 	public static void test( Maze maze) {
-		
-		System.out.println( "Original: " + //maze +
-							new MazeSolver( maze ) +
-							System.lineSeparator());	
+		MazeSolver Fred = new MazeSolver( maze); 
+		System.out.println(Fred.solve());
+		//System.out.println( "Original: " + //maze +
+		//					new MazeSolver( maze ) +
+		//					System.lineSeparator());	
 	}
 	
 }
