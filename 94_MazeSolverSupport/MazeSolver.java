@@ -14,8 +14,10 @@ public class MazeSolver {
     // ArrayList< Maze > solutions; // to hold valid solutions found during the solving
 				     // process
     private Maze inProgress; 	     // used during the solver method to find a solution
-	private int steps;
-
+	// private int steps;
+	// "steps" is held off for now - until a later version
+	
+	
 	// a constructor that updates solutions such that all correct paths that exist
 	// for the maze are included.
 	public MazeSolver( Maze maze ) {
@@ -36,9 +38,11 @@ public class MazeSolver {
 			return false;
 	    }
 		// recursive case
+		// tries different directions, sees if they're solvable, and if so,
+		// returns true
 		Maze snapshot = new Maze( inProgress);
 		System.out.println("Current board: " +"\n" + inProgress);
-		for( int dir = 1; dir < 5; dir++) {
+		for( int dir = 0; dir < 4; dir++) {
 			inProgress.dropA(inProgress.WALL);
 			inProgress.go( (int) Math.pow(2, dir));
 			
@@ -53,7 +57,7 @@ public class MazeSolver {
 				
 			}
 		}
-		
+		// if the maze isn't solvable
 		return false;
 		
 	}
