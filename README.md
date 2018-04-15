@@ -58,3 +58,4 @@ the valid paths
 ## v1
 * Add .txt after 4cell_treasureWest in header comment of UserOfMazeSolver to make the instructions clearer
 * Add additional comments in MazeSolver
+* Add step counting capabilities
