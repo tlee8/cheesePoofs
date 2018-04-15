@@ -29,11 +29,12 @@ public class MazeSolver {
 	public boolean solve() {
 		// base case
 		if (inProgress.explorerIsOnA() == inProgress.TREASURE) {
-			System.out.println("Current board:" + "\n" + inProgress);
+			System.out.println("Current board:" + "\n" + inProgress + "\n" + "MazeSolver took " + steps + " steps to solve the given maze. Woohoo!");
 			return true;
 	    }
 	    if (inProgress.explorerIsOnA() == inProgress.WALL) {
 			return false;
+			
 	    }
 		// recursive case
 		Maze snapshot = new Maze( inProgress);
@@ -41,7 +42,8 @@ public class MazeSolver {
 		for( int dir = 0; dir < 4; dir++) {
 			inProgress.dropA(inProgress.WALL);
 			inProgress.go( (int) Math.pow(2, dir)); //using powers of 2 that correlate to the directions set in the Maze class
-			
+			steps++;
+		       
 			if ( (inProgress.explorerIsOnA() == inProgress.STEPPING_STONE ||
 				  inProgress.explorerIsOnA() == inProgress.TREASURE)
 				&& solve()) { 
@@ -57,4 +59,5 @@ public class MazeSolver {
 		return false; // the maze is unsolvable
 		
 	}
+ 
 }
