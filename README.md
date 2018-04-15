@@ -54,3 +54,7 @@ the valid paths
 
 ## known bugs
 * Given an invalid coordinate, you will in turn be given a lengthy error
+
+## v1
+* Add .txt after 4cell_treasureWest in header comment of UserOfMazeSolver to make the instructions clearer
+* Add additional comments in MazeSolver
