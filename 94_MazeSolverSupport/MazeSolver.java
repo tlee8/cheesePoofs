@@ -22,7 +22,7 @@ public class MazeSolver {
 	// for the maze are included.
 	public MazeSolver( Maze maze ) {
 	    inProgress = maze;
-		steps = 0;
+	    //	steps = 0;
 		}
 	
 	
