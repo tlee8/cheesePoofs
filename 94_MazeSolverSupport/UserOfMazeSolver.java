@@ -2,7 +2,7 @@
 	Test MazeSolver by using incremental development.
 
 	Specify which maze to use and where the explorer starts like...
-		> java UserOfMazeSolver mazes/4cell_treasureWest 1 1
+		> java UserOfMazeSolver mazes/4cell_treasureWest.txt 1 1
 	Which creates a maze that looks like
 		
 	
